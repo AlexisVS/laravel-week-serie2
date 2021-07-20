@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ChatController;
+use App\Http\Controllers\CouleurController;
+use App\Http\Controllers\OutilsScolaire;
+use App\Http\Controllers\PlatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +32,11 @@ Route::get('/prenom', function () {
 Route::get('/age', function () {
     return view('pages.age');
 });
+
+Route::get('/chat', [ChatController::class, "index"]);
+
+Route::get('/couleur', [CouleurController::class, "index"]);
+
+Route::get('/plat', [PlatController::class, "index"]);
+
+Route::get('/outilsScolaire', [OutilsScolaire::class, "index"]);
