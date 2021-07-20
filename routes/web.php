@@ -33,10 +33,10 @@ Route::get('/age', function () {
     return view('pages.age');
 });
 
-Route::get('/chat', [ChatController::class, "index"]);
+Route::get('/chat', [ChatController::class, "index"])->name('chat');
 
-Route::get('/couleur', [CouleurController::class, "index"]);
+Route::get('/couleur', [CouleurController::class, "index"])->name('couleur');
 
-Route::get('/plat', [PlatController::class, "index"]);
+Route::get('/plat', [PlatController::class, "index"])->name('plat');
 
 Route::get('/outilsScolaire', [OutilsScolaire::class, "index"]);
